@@ -1,38 +1,28 @@
 name: Run Tests
 
-# Trigger the workflow on push to any branch or pull request
 on:
   push:
     branches:
-      - main   # Or any branch you want to trigger on
+      - main
   pull_request:
     branches:
       - main
 
 jobs:
-  test:
-    runs-on: ubuntu-latest  # Use the latest Ubuntu runner
+  build:
+    runs-on: ubuntu-latest  # You can choose another OS like macOS or Windows
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3  # Check out your code
+        uses: actions/checkout@v2
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16'  # Set the Node.js version you need (you can change it)
+          node-version: '22.x'  # Use Node.js 22.x to match your local version
 
       - name: Install dependencies
-        run: |
-          npm install   # Or yarn install, depending on your project setup
+        run: npm install
 
       - name: Run tests
-        run: |
-          npm test      # Or yarn test, depending on your setup
-
-      - name: Upload test results (optional, if using a tool like Jest)
-        uses: actions/upload-artifact@v3
-        with:
-          name: test-results
-          path: ./test-results  # If you have a test results directory (optional)
-
+        run: npm test
