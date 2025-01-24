@@ -1,0 +1,17 @@
+:root {
+  --theme-bg: #242424; /* Dark background color */
+  --body-color: #ffffff; /* Text color */
+  --button-bg: #1a1a1a; /* Button background color */
+  --border-color: #646cff; /* Border color */
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-color: var(--theme-bg);
+  color: var(--body-color);
+}
+
+#root {
+  height: 100vh; /* Ensure the root element takes the full viewport height */
+}

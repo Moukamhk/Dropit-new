@@ -1,0 +1,43 @@
+.sidebar {
+  width: 220px;
+  background-color: var(--theme-bg);
+  border-right: 1px solid var(--border-color);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 1rem;
+}
+
+.logo-expand {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.side-wrapper {
+  margin-bottom: 2rem;
+}
+
+.side-title {
+  color: var(--body-color);
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.side-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
